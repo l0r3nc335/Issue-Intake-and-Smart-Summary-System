@@ -1,0 +1,6 @@
+backend/vendor
+backend/.env
+backend/database/database.sqlite
+backend_new/
+frontend/node_modules
+frontend/dist

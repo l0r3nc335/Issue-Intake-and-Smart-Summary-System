@@ -1,0 +1,28 @@
+@api = http://localhost:8000/api
+
+### Create issue
+POST {{api}}/issues
+Content-Type: application/json
+
+{
+  "title": "Checkout flow fails for VAT invoices",
+  "description": "Enterprise users report timeout while submitting VAT invoice details in checkout from EU region.",
+  "priority": "high",
+  "category": "payments",
+  "status": "open"
+}
+
+### List issues with filters
+GET {{api}}/issues?status=open&priority=high
+
+### View issue
+GET {{api}}/issues/1
+
+### Update issue
+PATCH {{api}}/issues/1
+Content-Type: application/json
+
+{
+  "status": "in_progress",
+  "priority": "critical"
+}
